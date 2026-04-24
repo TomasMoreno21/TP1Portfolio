@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum - Tomás Matías Moreno</title>
+    <style>
+        :root {
+            --bg: #f5f7fb;
+            --surface: #ffffff;
+            --primary: #2f4f86;
+            --accent: #4e82d7;
+            --text: #1f2937;
+            --muted: #64748b;
+            --border: rgba(99, 102, 241, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, Ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: linear-gradient(180deg, #eef3fb 0%, #f8fafc 100%);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        main {
+            max-width: 980px;
+            margin: 32px auto;
+            padding: 0 20px 40px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            box-shadow: 0 24px 80px rgba(15, 23, 42, 0.08);
+            overflow: hidden;
+        }
+
+        .header {
+            padding: 32px 40px;
+            background: radial-gradient(circle at top left, rgba(78, 130, 215, 0.18), transparent 42%),
+                        rgba(47, 79, 134, 0.95);
+            color: white;
+        }
+
+        .header h1 {
+            margin: 0 0 10px;
+            font-size: clamp(2rem, 4vw, 3rem);
+            letter-spacing: -0.04em;
+        }
+
+        .header p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.84);
+            font-size: 1rem;
+        }
+
+        .meta {
+            margin-top: 22px;
+            display: grid;
+            gap: 12px;
+            font-size: 0.96rem;
+        }
+
+        .meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.84);
+        }
+
+        .meta span::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 999px;
+            background: #82b4ff;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 1.5rem;
+            padding: 32px 40px 40px;
+        }
+
+        .section {
+            margin-bottom: 24px;
+        }
+
+        .section h2 {
+            margin: 0 0 16px;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        .section p,
+        .section li {
+            color: var(--muted);
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 8px;
+        }
+
+        .section li {
+            background: #f4f7ff;
+            border: 1px solid rgba(35, 74, 155, 0.08);
+            border-radius: 14px;
+            padding: 12px 16px;
+        }
+
+        .sidebar {
+            display: grid;
+            gap: 20px;
+        }
+
+        .highlight {
+            padding: 20px;
+            background: #f8fbff;
+            border: 1px solid rgba(78, 130, 215, 0.12);
+            border-radius: 20px;
+        }
+
+        .highlight h3 {
+            margin: 0 0 10px;
+            font-size: 1rem;
+            color: var(--primary);
+        }
+
+        .highlight p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .social-links {
+            display: grid;
+            gap: 10px;
+            margin: 0;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 14px;
+            border-radius: 12px;
+            border: 1px solid rgba(35, 74, 155, 0.12);
+            color: var(--primary);
+            text-decoration: none;
+            background: #ffffff;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 24px rgba(47, 79, 134, 0.08);
+        }
+
+        .footer-note {
+            margin-top: 0;
+            padding: 28px 40px;
+            background: #f8fafc;
+            border-top: 1px solid rgba(15, 23, 42, 0.06);
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 860px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+            main {
+                margin: 20px auto;
+                padding: 0 16px 30px;
+            }
+
+            .header {
+                padding: 28px 24px;
+            }
+
+            .content {
+                padding: 24px;
+            }
+
+            .footer-note {
+                padding: 22px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <article class="card">
+            <header class="header">
+                <h1>Tomás Matías Moreno</h1>
+                <p>Joven estudiante con mentalidad proactiva y ganas de crecer en la industria de los videjuegos.</p>
+                <div class="meta">
+                    <span>Nacimiento: 21 de diciembre de 2006</span>
+                    <span>Rafaela, Santa Fe, Argentina</span>
+                    <span>Email: morenotomas2112@gmail.com</span>
+                    <span>Teléfono: 3492209080</span>
+                </div>
+            </header>
+
+            <section class="content">
+                <div>
+                    <div class="section">
+                        <h2>Sobre mí</h2>
+                        <p>Soy responsable, organizado y busco siempre mejorar. Me adapto con facilidad al trabajo en equipo y me interesa aprender nuevas herramientas e ideas relacionadas con la creación y producción.</p>
+                    </div>
+
+                    <div class="section">
+                        <h2>Objetivo profesional</h2>
+                        <p>Busco oportunidades de adquirir conocimientos y desarrollarme dentro de esta industria, aportando compromiso y ganas de crecer en proyectos de videojuegos.</p>
+                    </div>
+
+                    <div class="section">
+                        <h2>Educación</h2>
+                        <ul>
+                            <li>
+                                <strong>Bachiller en Economía y Administración</strong><br>
+                                Escuela ESSO N° 429 Mario R. Vecchioli
+                            </li>
+                            <li>
+                                <strong>Estudios actuales</strong><br>
+                                Producción de videojuegos y entretenimiento digital
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h2>Conocimientos</h2>
+                        <ul>
+                            <li>Word básico</li>
+                            <li>Inglés básico</li>
+                            <li>Manejo de CapCup básico</li>
+                            <li>Godot intermedio</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h2>Proyectos desarrollados</h2>
+                        <ul>
+                            <li><strong>Golpe Letal</strong> - videojuego 2D de pelea.</li>
+                            <li><strong>Digital Defenders</strong> - Space invaders con ambientacion en mundo digital.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <aside class="sidebar">
+                    <div class="highlight">
+                        <h3>Habilidades destacadas</h3>
+                        <ul>
+                            <li>Adaptabilidad</li>
+                            <li>Trabajo en equipo</li>
+                            <li>Organizado</li>
+                            <li>Responsabilidad</li>
+                        </ul>
+                    </div>
+
+                    <div class="highlight">
+                        <h3>Intereses</h3>
+                        <p>Apasionado por el desarrollo de proyectos creativos, el aprendizaje continuo y el uso de tecnología para mejorar resultados.</p>
+                    </div>
+
+                    <div class="highlight">
+                        <h3>Redes sociales</h3>
+                        <div class="social-links">
+                            <a href="https://github.com/TomasMoreno21" target="_blank" rel="noopener">GitHub</a>
+                            <a href="https://www.instagram.com/tomasss_moreno/" target="_blank" rel="noopener">Instagram</a>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+
+            <footer class="footer-note">
+    
+            </footer>
+        </article>
+    </main>
+</body>
+</html>
